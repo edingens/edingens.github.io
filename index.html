@@ -3,78 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover how eating locally can reduce your carbon footprint and support sustainable agriculture.">
     <title>Eat Local, Think Global</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .hero-section {
+            background: url('https://source.unsplash.com/1600x900/?farm,local-food') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .hero-section p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+        .cta-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .cta-btn:hover {
+            background-color: #218838;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header id="main-header">
-        <nav>
-            <ul>
-                <li><a href="#problem">The Problem</a></li>
-                <li><a href="#history">History</a></li>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#how-to-eat-local">How to Eat Local</a></li>
-                <li><a href="#future">Future</a></li>
-            </ul>
-        </nav>
-    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Eat Local, Think Global</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="problem.html">The Problem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html">History of Local Eating</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="benefits.html">The Benefits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="future.html">Future of Local Eating</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="citations.html">Citations</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section id="hero">
-        <h1>Eat Local, Think Global</h1>
-        <p>Support sustainable agriculture while reducing your environmental impact.</p>
-        <button onclick="scrollToSection('food-miles-calculator')">Try the Food Miles Calculator</button>
+    <header class="hero-section">
+        <div class="container">
+            <h1>Eat Local, Think Global</h1>
+            <p>How Supporting Local Agriculture Saves the Planet</p>
+            <p>
+                <strong>Did you know?</strong> The average meal travels 1,500 miles to your plate.
+            </p>
+            <a href="problem.html" class="cta-btn">Discover More</a>
+        </div>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Welcome to the Movement</h2>
+            <p class="text-center">
+                Our food choices affect the environment, economy, and our health. By choosing local and seasonal food, 
+                you can reduce your carbon footprint, support your community, and enjoy fresher, more nutritious meals.
+            </p>
+            <p class="text-center">
+                Explore the pages to learn about the history of local eating, its benefits, and how you can make a difference.
+            </p>
+        </div>
     </section>
 
-    <!-- Main Content Sections -->
-    <main>
-        <!-- Section 1: The Problem -->
-        <section id="problem">
-            <h2>The Problem: Environmental Cost of Imported Food</h2>
-            <p>Learn how imported food contributes to carbon emissions and resource depletion.</p>
-            <div class="infographic">
-                <img src="assets/images/food-miles.jpg" alt="Food Miles Infographic">
-            </div>
-        </section>
-
-        <!-- Section 2: History of Local Eating -->
-        <section id="history">
-            <h2>History of Local Eating</h2>
-            <p>Discover how eating locally was once the norm and how industrialization changed that.</p>
-            <div id="historical-timeline"></div>
-        </section>
-
-        <!-- Section 3: Benefits -->
-        <section id="benefits">
-            <h2>Benefits of Eating Local</h2>
-            <ul>
-                <li>Reduces carbon emissions.</li>
-                <li>Supports small farmers.</li>
-                <li>Preserves biodiversity.</li>
-            </ul>
-        </section>
-
-        <!-- Section 4: How to Eat Local -->
-        <section id="how-to-eat-local">
-            <h2>How to Eat Local</h2>
-            <div id="local-food-map"></div>
-        </section>
-
-        <!-- Section 5: The Future -->
-        <section id="future">
-            <h2>The Future of Local Eating</h2>
-            <p>Explore innovations like urban farming and regenerative agriculture.</p>
-        </section>
-    </main>
-
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Eat Local, Think Global</p>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Eat Local, Think Global. All rights reserved.</p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
