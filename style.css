@@ -9,15 +9,41 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: #2a5934; /* Deep green for the navbar */
+    background-color: #4d804e; /* Medium green for the navbar */
+    border-bottom: 3px solid #3a6b3b; /* Slightly darker green for accent */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
 }
 
-.navbar-brand, .nav-link {
-    color: #ffffff !important; /* White text for contrast */
+.navbar-brand {
+    font-weight: bold;
+    color: #ffffff !important;
+    transition: color 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.navbar-brand:hover {
+    color: #dff3e0 !important; /* Lighter green on hover */
+}
+
+.nav-link {
+    color: #ffffff !important; /* White text for links */
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+    border-radius: 5px; /* Rounded edges for clickable feel */
 }
 
 .nav-link:hover {
-    color: #a8d5ba !important; /* Light green hover effect */
+    background-color: #3a6b3b; /* Darker green background on hover */
+    color: #dff3e0 !important; /* Lighter green text on hover */
+}
+
+/* Active Link Styling */
+.nav-link.active {
+    background-color: #3a6b3b; /* Highlight active link */
+    color: #ffffff !important;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add depth to active link */
 }
 
 /* Header Section */
