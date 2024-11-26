@@ -9,14 +9,14 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: #4d804e; /* Medium green for the navbar */
-    border-bottom: 3px solid #3a6b3b; /* Slightly darker green for accent */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+    background-color: #4d804e; /* Medium green for the navbar background */
+    border-bottom: 3px solid #3a6b3b; /* Slightly darker green for an accent */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
 .navbar-brand {
     font-weight: bold;
-    color: #ffffff !important;
+    color: #ffffff !important; /* White text for the brand */
     transition: color 0.3s ease-in-out; /* Smooth hover effect */
 }
 
@@ -24,26 +24,46 @@ body {
     color: #dff3e0 !important; /* Lighter green on hover */
 }
 
+/* Navbar Links - Default */
 .nav-link {
+    background-color: #4d804e; /* Same green as the navbar background */
     color: #ffffff !important; /* White text for links */
     font-size: 1rem;
     font-weight: 500;
     padding: 10px 15px;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
-    border-radius: 5px; /* Rounded edges for clickable feel */
+    margin: 5px; /* Spacing between buttons */
+    border: 2px solid transparent; /* Invisible border for consistent sizing */
+    border-radius: 5px; /* Rounded corners for button-like appearance */
+    transition: all 0.3s ease-in-out; /* Smooth hover effect for scale and color */
+    text-decoration: none; /* No underline */
 }
 
+/* Navbar Links - Hover Effect */
 .nav-link:hover {
-    background-color: #3a6b3b; /* Darker green background on hover */
+    background-color: #3a6b3b; /* Darker green on hover */
     color: #dff3e0 !important; /* Lighter green text on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+    border-color: #ffffff; /* Add a white border on hover */
 }
 
-/* Active Link Styling */
+/* Active Link */
 .nav-link.active {
     background-color: #3a6b3b; /* Highlight active link */
     color: #ffffff !important;
     font-weight: bold;
+    border-color: #ffffff; /* Add a border to the active button */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add depth to active link */
+}
+
+/* Navbar Button-like Layout */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item {
+    margin: 0 5px; /* Add spacing between items */
 }
 
 /* Header Section */
@@ -77,6 +97,7 @@ header p {
 
 .cta-btn:hover, .btn:hover {
     background-color: #3a6b3b; /* Darker green for hover */
+    transform: scale(1.05); /* Slight enlargement on hover */
 }
 
 /* Section Styling */
