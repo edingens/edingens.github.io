@@ -67,64 +67,37 @@
         </div>
     </section>
 
-        <!-- Explore the Subtopics -->
-        <section class="py-5 bg-light">
-            <div class="container">
-                <h2 class="text-center mb-4">Explore the Issues</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3>The Problem</h3>
-                        <p>Discover the environmental and social costs of our industrialized food systems.</p>
-                        <a href="problem.html" class="btn btn-success">Learn More</a>
-                    </div>
-                    <div class="col-md-6">
-                        <h3>The History of Local Eating</h3>
-                        <p>Trace the shift from traditional, local food systems to modern global supply chains.</p>
-                        <a href="history.html" class="btn btn-success">Learn More</a>
-                    </div>
+    <!-- Explore the Subtopics -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Explore the Issues</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>The Problem</h3>
+                    <p>Discover the environmental and social costs of our industrialized food systems.</p>
+                    <a href="problem.html" class="btn btn-success">Learn More</a>
                 </div>
-                <div class="row mt-4">
-                    <div class="col-md-6">
-                        <h3>The Benefits</h3>
-                        <p>Understand the economic, environmental, and health advantages of eating local.</p>
-                        <a href="benefits.html" class="btn btn-success">Learn More</a>
-                    </div>
-                    <div class="col-md-6">
-                        <h3>The Future of Local Eating</h3>
-                        <p>Explore innovative solutions like urban farming and zero-waste food systems.</p>
-                        <a href="future.html" class="btn btn-success">Learn More</a>
-                    </div>
+                <div class="col-md-6">
+                    <h3>The History of Local Eating</h3>
+                    <p>Trace the shift from traditional, local food systems to modern global supply chains.</p>
+                    <a href="history.html" class="btn btn-success">Learn More</a>
                 </div>
             </div>
-        </section>
-    
-        <!-- Call to Action -->
-        <section class="py-5 text-center">
-            <div class="container">
-                <h2>Join the Movement</h2>
-                <p>Make meaningful changes with your food choices. Together, we can build a sustainable food future.</p>
-                <a href="citations.html" class="btn btn-primary">Start Learning</a>
-            </div>
-        </section>
-
-    <!-- Seasonal vs. Imported Quiz -->
-    <section id="quiz-section" class="py-5 bg-light">
-        <div class="container text-center">
-            <h2>Seasonal vs. Imported Quiz</h2>
-            <p class="mb-4">Guess which foods have a higher carbon footprint based on their source!</p>
-            <div id="quiz-container">
-                <div id="question-container">
-                    <h4 id="question">Which has a higher carbon footprint?</h4>
-                    <button class="btn btn-primary quiz-btn" onclick="checkAnswer('seasonal')">Seasonal Apples (Local Farm)</button>
-                    <button class="btn btn-danger quiz-btn" onclick="checkAnswer('imported')">Imported Bananas (Shipped Overseas)</button>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h3>The Benefits</h3>
+                    <p>Understand the economic, environmental, and health advantages of eating local.</p>
+                    <a href="benefits.html" class="btn btn-success">Learn More</a>
                 </div>
-                <div id="feedback-container" class="mt-3" style="display: none;">
-                    <p id="feedback"></p>
-                    <button class="btn btn-success" onclick="nextQuestion()">Next Question</button>
+                <div class="col-md-6">
+                    <h3>The Future of Local Eating</h3>
+                    <p>Explore innovative solutions like urban farming and zero-waste food systems.</p>
+                    <a href="future.html" class="btn btn-success">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
@@ -133,71 +106,5 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- JavaScript for Quiz -->
-    <script>
-        // Quiz Data
-        const quizQuestions = [
-            {
-                question: "Which has a higher carbon footprint?",
-                options: ["Seasonal Apples (Local Farm)", "Imported Bananas (Shipped Overseas)"],
-                answer: "imported",
-                feedback: "Imported bananas have a significantly higher carbon footprint due to the distance they travel and the resources needed for shipping."
-            },
-            {
-                question: "Which has a higher carbon footprint?",
-                options: ["Local Strawberries (In Season)", "Out-of-Season Strawberries (Flown In)"],
-                answer: "imported",
-                feedback: "Out-of-season strawberries are often flown in from other countries, greatly increasing their carbon footprint."
-            },
-            {
-                question: "Which has a higher carbon footprint?",
-                options: ["Local Kale (Grown Nearby)", "Packaged Lettuce (Traveled 1,000 Miles)"],
-                answer: "imported",
-                feedback: "Packaged lettuce often requires long-distance transport and refrigeration, adding to its carbon footprint."
-            }
-        ];
-
-        let currentQuestionIndex = 0;
-
-        // Load Quiz Question
-        function loadQuestion() {
-            const question = quizQuestions[currentQuestionIndex];
-            document.getElementById("question").innerText = question.question;
-            const buttons = document.querySelectorAll(".quiz-btn");
-            buttons[0].innerText = question.options[0];
-            buttons[0].setAttribute("onclick", `checkAnswer('seasonal')`);
-            buttons[1].innerText = question.options[1];
-            buttons[1].setAttribute("onclick", `checkAnswer('imported')`);
-            document.getElementById("feedback-container").style.display = "none";
-            document.getElementById("question-container").style.display = "block";
-        }
-
-        // Check Answer
-        function checkAnswer(choice) {
-            const question = quizQuestions[currentQuestionIndex];
-            const feedback = document.getElementById("feedback");
-            if (choice === question.answer) {
-                feedback.innerHTML = `<span style="color: green; font-weight: bold;">Correct!</span> ${question.feedback}`;
-            } else {
-                feedback.innerHTML = `<span style="color: red; font-weight: bold;">Incorrect!</span> ${question.feedback}`;
-            }
-            document.getElementById("question-container").style.display = "none";
-            document.getElementById("feedback-container").style.display = "block";
-        }
-
-        // Next Question
-        function nextQuestion() {
-            currentQuestionIndex++;
-            if (currentQuestionIndex < quizQuestions.length) {
-                loadQuestion();
-            } else {
-                document.getElementById("quiz-container").innerHTML = "<h4>You've completed the quiz! Thanks for participating!</h4>";
-            }
-        }
-
-        // Initialize Quiz
-        document.addEventListener("DOMContentLoaded", loadQuestion);
-    </script>
 </body>
 </html>
